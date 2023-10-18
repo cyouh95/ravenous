@@ -1,4 +1,5 @@
 import './App.css';
+import SearchBar from '../SearchBar/SearchBar';
 import BusinessList from '../BusinessList/BusinessList';
 
 function App() {
@@ -6,8 +7,10 @@ function App() {
         <div>
             <header>ravenous</header>
             <main>
+                <SearchBar />
                 <BusinessList />
             </main>
+            <footer></footer>
         </div>
     );
 }

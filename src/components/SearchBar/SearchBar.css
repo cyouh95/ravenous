@@ -1,0 +1,86 @@
+.hero {
+  height: 500px;
+  background-image: url(../../assets/background_search_desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .sort {
+  display: flex;
+}
+
+.hero .sort div {
+  color: white;
+  width: 80px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 15px;
+  border-bottom: 1px solid white;
+  padding: 8px 50px;
+  cursor: pointer;
+  transition: color 400ms ease, border-bottom-color 400ms ease;
+}
+
+.hero .sort div:not(.active):hover {
+  color: var(--highlight-color);
+  border-bottom-color: var(--highlight-color);
+}
+
+.hero .sort .active {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  cursor: default;
+  pointer-events: none;
+}
+
+.hero .search {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.hero .search input {
+  width: 350px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  margin: 5px 10px;
+  padding: 0 12px;
+}
+
+.hero .search input:focus {
+  outline: none;
+}
+
+.hero button {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: background-color 400ms ease;
+}
+
+.hero button:hover {
+  background-color: var(--highlight-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    background-image: url(../../assets/background_search_mobile.jpg);
+  }
+
+  .hero .sort div {
+    width: 60px;
+    font-size: 12px;
+    padding: 8px 30px;
+  }
+}

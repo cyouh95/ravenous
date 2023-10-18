@@ -27,7 +27,7 @@
 }
 
 .card .info .category {
-  color: goldenrod;
+  color: var(--primary-color);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 15px;
@@ -35,6 +35,6 @@
 }
 
 .card .info .rating {
-  color: goldenrod;
+  color: var(--primary-color);
   font-weight: 600;
 }
