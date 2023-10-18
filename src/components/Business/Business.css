@@ -1,0 +1,40 @@
+.card {
+  width: 280px;
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 5px 0;
+}
+
+.card .info {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+.card .info p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.card .info p:nth-of-type(even) {
+  text-align: right;
+}
+
+.card .info .category {
+  color: goldenrod;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.card .info .rating {
+  color: goldenrod;
+  font-weight: 600;
+}
