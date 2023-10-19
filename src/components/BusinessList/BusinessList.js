@@ -1,17 +1,8 @@
 import './BusinessList.css';
 import Business from '../Business/Business';
 
-function BusinessList() {
-    const businesses = [
-        <Business />,
-        <Business />,
-        <Business />,
-        <Business />,
-        <Business />,
-        <Business />
-    ];
-
-    return <div className="container">{businesses}</div>;
+function BusinessList({ businesses }) {
+    return <div className="container">{businesses.map(business => <Business business={business} key={business.name} />)}</div>;
 }
 
 export default BusinessList;

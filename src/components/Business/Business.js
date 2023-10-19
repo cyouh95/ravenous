@@ -1,29 +1,17 @@
 import './Business.css';
 
-function Business() {
-    const sample = {
-        imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-        name: 'MarginOtto Pizzeria',
-        address: '1010 Paddington Way',
-        city: 'Flavortown',
-        state: 'NY',
-        zipCode: '10101',
-        category: 'Italian',
-        rating: 4.5,
-        reviewCount: 90
-    };
-
+function Business({ business }) {
     return (
         <div className="card">
-            <img src={sample.imageSrc} alt={sample.name} />
-            <h3>{sample.name}</h3>
+            <img src={business.imageSrc} alt={business.name} />
+            <h3>{business.name}</h3>
             <div className="info">
-                <p>{sample.address}</p>
-                <p className="category">{sample.category}</p>
-                <p>{sample.city}</p>
-                <p className="rating">{sample.rating} stars</p>
-                <p>{sample.state} {sample.zipCode}</p>
-                <p>{sample.reviewCount} reviews</p>
+                <p>{business.address}</p>
+                <p className="category">{business.category}</p>
+                <p>{business.city}</p>
+                <p className="rating">{business.rating} stars</p>
+                <p>{business.state} {business.zipCode}</p>
+                <p>{business.reviewCount} reviews</p>
             </div>
         </div>
     );
