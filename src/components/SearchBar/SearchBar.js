@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './SearchBar.css';
 
-function SearchBar() {
+function SearchBar({ handleSearch }) {
     // Sort by
     const [sortBy, setSortBy] = useState('best_match');
 
@@ -31,7 +31,7 @@ function SearchBar() {
     // Submit
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(`Searching Yelp with ${searchTerm}, ${searchLocation}, ${sortBy}...`);
+        handleSearch(searchTerm, searchLocation, sortBy);
     }
 
     return (

@@ -1,34 +1,22 @@
+import { useState } from 'react';
 import './App.css';
 import SearchBar from '../SearchBar/SearchBar';
 import BusinessList from '../BusinessList/BusinessList';
+import search from '../../utils/api';
 
 function App() {
-    const business = {
-        imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-        name: 'MarginOtto Pizzeria',
-        address: '1010 Paddington Way',
-        city: 'Flavortown',
-        state: 'NY',
-        zipCode: '10101',
-        category: 'Italian',
-        rating: 4.5,
-        reviewCount: 90
-    };
+    const [businesses, setBusinesses] = useState([]);
 
-    const businesses = [
-        business,
-        business,
-        business,
-        business,
-        business,
-        business
-    ];
+    const handleSearch = async (searchTerm, searchLocation, sortBy) => {
+        const results = await search(searchTerm, searchLocation, sortBy);
+        setBusinesses(results);
+    }
 
     return (
         <div>
             <header>ravenous</header>
             <main>
-                <SearchBar />
+                <SearchBar handleSearch={handleSearch} />
                 <BusinessList businesses={businesses} />
             </main>
             <footer></footer>
